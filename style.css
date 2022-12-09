@@ -1,4 +1,29 @@
-.para1 {
-  background-color: #817b7b;
-  padding: 20px;
+h1 {
   text-align: center;
+}
+
+p {
+  text-align: center;
+}
+
+#para1 {
+  color: rgb(155, 79, 38);
+}
+
+h1.center {
+  text-align: center;
+  color: rgb(251, 251, 251);
+
+
+header.center {
+  text-align: center;
+  color: rgb(237, 14, 14);
+}
+padding-top: 80px;
+background-color: rgb(155, 79, 38);
+padding-bottom: 200px;
+
+ul > li {
+  display: inline;
+}
+
