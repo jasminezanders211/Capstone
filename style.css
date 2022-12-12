@@ -13,17 +13,19 @@ p {
 h1.center {
   text-align: center;
   color: rgb(251, 251, 251);
-
-
-header.center {
-  text-align: center;
-  color: rgb(237, 14, 14);
-}
-padding-top: 80px;
+  padding-top: 80px;
 background-color: rgb(155, 79, 38);
 padding-bottom: 200px;
-
-ul > li {
-  display: inline;
 }
 
+
+#navlist li {
+  display: inline;
+
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 200px 100px;
+  background-color: blue;
+}
