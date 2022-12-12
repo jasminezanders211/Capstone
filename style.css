@@ -1,0 +1,31 @@
+h1 {
+  text-align: center;
+}
+
+p {
+  text-align: center;
+}
+
+#para1 {
+  color: rgb(155, 79, 38);
+}
+
+h1.center {
+  text-align: center;
+  color: rgb(251, 251, 251);
+  padding-top: 80px;
+background-color: rgb(155, 79, 38);
+padding-bottom: 200px;
+}
+
+
+#navlist li {
+  display: inline;
+
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 200px 100px;
+  background-color: blue;
+}
