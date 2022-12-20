@@ -9,6 +9,7 @@ export default state => html`
   <p>still working on this.</p>
   <main>
     <div>
+      <img src="hats.jpg" class="myImage" />
       <h2 id="para1">Place Holder</h2>
       <ol>
         <li>place holder</li>
