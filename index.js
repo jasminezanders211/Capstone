@@ -15,14 +15,13 @@ function render(state = store.Home) {
   ${Main(state)}
   ${Footer(state)}
 `;
-  afterRender(state);
+
   router.updatePageLinks();
 }
 // function afterRender(state) {
 //   document.querySelector(".fa-bars").addEventListener("click", () => {
 //     document.querySelector("nav > ul").classList.toggle("hidden--mobile");
 //   });
-const collegeList = []
 
 router.hooks({
   before: (done, params) => {
@@ -54,20 +53,13 @@ router.hooks({
           .catch(err => console.log(err));
         break;
       // New Case for Pizza View
-      case "Pizza":
-        // New Axios get request utilizing already made environment variable
-        axios
-          .get(`${process.env.PIZZA_PLACE_API_URL}/pizzas`)
-          .then(response => {
-            console.log(response.data); // Storing retrieved data in state
-            store.Pizza.pizzas = response.data;
-            done();
-          })
-          .catch(error => {
-            console.log("It puked", error);
-            done();
-          });
-        break;
+      // case "Rate":
+      //   axios
+      //     .get("http://universities.hipolabs.com/search?name=middle")
+      //     .then(response => {
+      //       console.log(response.data);
+      //     });
+      //   break;
       default:
         done();
     }

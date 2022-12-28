@@ -1,9 +1,9 @@
 import html from "html-literal";
-
+import hat from "../../assets/images/hats.jpg";
 export default state => html`
   <p>still working on this.</p>
   <div>
-    <img src="hats.jpg" id="myImage" />
+    <img src=${hat} id="graduation" />
   </div>
   <main>
     <div>

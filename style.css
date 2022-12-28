@@ -45,3 +45,23 @@ nav {
   background-color:rgb(225, 225, 225);
   height: 100px;
 }
+
+#headerLogo {
+  height: 200px;
+}
+header {
+  text-align: center;
+}
+#graduation {
+  height: 1200px
+}
+body {
+padding: 0;
+margin: 0;
+}
+#contactContainer {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  text-align: center;
+}
