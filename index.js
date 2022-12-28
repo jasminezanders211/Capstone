@@ -15,8 +15,15 @@ function render(state = store.Home) {
   ${Main(state)}
   ${Footer(state)}
 `;
+  afterRender(state);
   router.updatePageLinks();
 }
+// function afterRender(state) {
+//   document.querySelector(".fa-bars").addEventListener("click", () => {
+//     document.querySelector("nav > ul").classList.toggle("hidden--mobile");
+//   });
+const collegeList = []
+
 router.hooks({
   before: (done, params) => {
     const view =

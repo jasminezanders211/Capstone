@@ -2,6 +2,6 @@ import html from "html-literal";
 
 export default () => html`
   <header>
-    <h1 id="para3">College Rate</h1>
+    <img src="college rate.png" id="myImage2" />
   </header>
 `;
