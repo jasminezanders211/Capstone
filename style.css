@@ -7,7 +7,7 @@ p {
 }
 
 #para1 {
-  color: rgb(155, 79, 38);
+  color: rgb(0, 0, 0);
 }
 
 h1.center {
@@ -18,14 +18,50 @@ background-color: rgb(155, 79, 38);
 padding-bottom: 200px;
 }
 
-
-#navlist li {
-  display: inline;
-
-}
-
 .grid-container {
   display: grid;
-  grid-template-columns: 200px 100px;
-  background-color: blue;
+  grid-template-columns: 100px 100px;
+  background-color: rgb(255, 167, 208);
+}
+
+#para3 {
+  background-color:rgb(225, 225, 225);
+  height: 100px;
+}
+nav > ul > li {
+  display: inline-block;
+  text-decoration: none;
+  border: none;
+  padding: 0.5rem 0.5rem;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+nav {
+  background-color:rgb(225, 225, 225);
+  height: 100px;
+}
+
+#headerLogo {
+  height: 200px;
+}
+header {
+  text-align: center;
+}
+#graduation {
+  height: 1200px
+}
+body {
+padding: 0;
+margin: 0;
+}
+#contactContainer {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  text-align: center;
 }

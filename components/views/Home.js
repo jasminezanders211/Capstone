@@ -1,18 +1,16 @@
 import html from "html-literal";
-
+import hat from "../../assets/images/hats.jpg";
 export default state => html`
-  <div class="grid-container">
-    <div class="grid-item grid-item-1">zoo animals</div>
-    <div class="grid-item grid-item-2">cee animals</div>
-    <div class="grid-item grid-item-3">cee animals</div>
-  </div>
   <p>still working on this.</p>
+  <div>
+    <img src=${hat} id="graduation" />
+  </div>
   <main>
     <div>
-      <h2 id="para1">Place Holder</h2>
+      <h2 id="para1">College List</h2>
       <ol>
-        <li>place holder</li>
-        <li>place holder</li>
+        <li>Florissant Valley Community College</li>
+        <li>Washington University</li>
         <li>place holder</li>
         <li>place holder</li>
         <li>place holder</li>

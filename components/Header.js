@@ -1,7 +1,7 @@
 import html from "html-literal";
-
+import logo from "../assets/images/college_rate.png";
 export default () => html`
   <header>
-    <h1>Example SPA</h1>
+    <img src=${logo} id="headerLogo" />
   </header>
 `;
