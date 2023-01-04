@@ -1,7 +1,7 @@
 import html from "html-literal";
 import hat from "../../assets/images/hats.jpg";
 export default state => html`
-  <p>still working on this.</p>
+  <p>What should I put.</p>
   <div>
     <img src=${hat} id="graduation" />
   </div>
