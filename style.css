@@ -31,7 +31,7 @@ padding-bottom: 200px;
 nav > ul > li {
   display: inline-block;
   text-decoration: none;
-  border: none;
+  border: inset;
   padding: 0.5rem 0.5rem;
 }
 
