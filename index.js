@@ -10,8 +10,8 @@ function render(state = store.Home) {
   console.table(`${state}`);
   document.querySelector("#root").innerHTML = `
 
-  ${Nav(store.Links)}
   ${Header(state)}
+  ${Nav(store.Links)}
   ${Main(state)}
   ${Footer(state)}
 `;

@@ -2,13 +2,6 @@ h1 {
   text-align: center;
 }
 
-p {
-  text-align: center;
-}
-
-#para1 {
-  color: rgb(0, 0, 0);
-}
 
 h1.center {
   text-align: center;
@@ -18,33 +11,32 @@ background-color: rgb(155, 79, 38);
 padding-bottom: 200px;
 }
 
-.grid-container {
-  display: grid;
-  grid-template-columns: 100px 100px;
-  background-color: rgb(255, 167, 208);
-}
-
 #para3 {
   background-color:rgb(225, 225, 225);
   height: 100px;
 }
 nav > ul > li {
   display: inline-block;
-  text-decoration: none;
-  border: inset;
-  padding: 0.5rem 0.5rem;
+  border: none;
+  padding: 1.5rem 1.5rem;
 }
 
 nav {
   display: flex;
   align-items: center;
   flex-direction: column;
-}
-
-nav {
-  background-color:rgb(195, 190, 145);
   height: 100px;
-}
+  color: aliceblue;
+  text-decoration: none;
+  font-size: 30px;
+  font-family:Helvetica, sans-serif;
+  background-color:#04465F;
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+  }
 
 #headerLogo {
   height: 200px;
@@ -61,15 +53,87 @@ margin: 0;
 }
 #contactContainer {
   display: flex;
-  justify-content: flex-end;
   flex-direction: column;
   text-align: center;
+  background-color: black;
+  width: 35%;
+  margin-top: 2em;
+  height: 40em;
+  /* padding-top: 2.5em; */
+  margin-bottom: 2em;
+}
+#bigWrapper {
+  /* background-color: lawngreen; */
+  text-align: center;
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: center;
+}
+
+#formContainer {
+  display: block;
+  text-align: center;
+}
+form {
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contactFormInput{
+  margin-bottom: 2em;
+  font-size: 24px;
+}
+textarea {
+  resize: none;
 }
 
 header {
-  background-color: rgb(252, 228, 201);
+  background-color: #074065;
 }
 
 footer {
-  background-color:rgb(195, 190, 145);
+  background-color:rgb(195, 168, 145);
+  /* margin-top: 20em; */
+text-align: center;
+height: 4em;
+
+}
+
+#root {
+background-repeat: no-repeat;
+background-position: center;
+background-size: cover;
+background: linear-gradient( #000000aa , #000000aa),url("./assets/images/hats2.jpg")
+}
+body {
+  color: white;
+}
+#headerLogo {
+  filter: invert(100%)
+}
+.cake {
+  width: 30%;
+}
+.imgContainer {
+  background-color: transparent;
+  display: flex;
+  justify-content: space-around;
+margin-bottom: 1em;
+backdrop-filter: blur(6px);
+}
+.localCollege {
+
+}
+.localCollege * p {
+  text-align: left;
+}
+#rateSubHead {
+text-align: center;
+}
+.collegeLogo {
+height: 5px;
+}
+#wash {
+ width: 10%;
 }
