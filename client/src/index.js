@@ -29,24 +29,52 @@ function afterRender(state) {
       const inputList = event.target.elements;
       console.log(inputList.college.value);
 
-      // let numEnv = parseInt(requestData.environment);
-      // let numEdu = parseInt(requestData.education);
-      // let numAct = parseInt(requestData.activities);
-      // let sum = numEnv + numEdu + numAct;
-      // let avg = sum / 3;
       const requestData = {
         college: inputList.college.value,
         environment: parseInt(inputList.environment.value),
         education: parseInt(inputList.education.value),
-        activities: parseInt(inputList.activities.value),
-        average: function() {
-          let sum = this.environment + this.education + this.activities;
-          let avg = sum / 3;
-          return avg;
-        }
+        activities: parseInt(inputList.activities.value)
       };
-      console.log(requestData);
+      function avg() {
+        let sum =
+          requestData.environment +
+          requestData.education +
+          requestData.activities;
+        let avg = sum / 3;
+        return avg;
+      }
+      // adding the average to the requestData object that will be stored in state so it can be accessed easily in next step
+      requestData.average = avg();
+
       store.Rate.rates.push(requestData);
+      // iterating all submitted rate objects that are stored in state so that the average can be dynamically updated upon each submission
+      // ideally this would be accessing rates that have been submitted to a database, but did not have time to implement
+      const avgs = store.Rate.rates.filter(
+        college => college.college === requestData.college
+      );
+      const newAvg =
+        avgs.reduce((total, next) => total + next.average, 0) / avgs.length;
+
+      // Switch statement is checking to see which college the submitted rate was for, the reassigning the new average to the respective college's "average" value
+      switch (requestData.college) {
+        case "Florissant Valley Community college":
+          store.Rate.avgData[0].average = newAvg;
+          break;
+        case "University of Missouri-St. Louis":
+          store.Rate.avgData[1].average = newAvg;
+          break;
+        case "Harris-Stowe State University":
+          store.Rate.avgData[2].average = newAvg;
+          break;
+        case "Washington University":
+          store.Rate.avgData[3].average = newAvg;
+          break;
+        case "Webster University":
+          store.Rate.avgData[4].average = newAvg;
+          break;
+      }
+
+      console.log(store.Rate.avgData);
       router.navigate("/Rate");
     });
   }
@@ -81,7 +109,32 @@ router.hooks({
           })
           .catch(err => console.log(err));
         break;
-
+      // Created a case for Rate and giving avgData a "baseline" to display when page loads
+      case "Rate":
+        store.Rate.avgData = [
+          {
+            college: "Florissant Valley Community college",
+            average: 0
+          },
+          {
+            college: "University of Missouri-St. Louis",
+            average: 0
+          },
+          {
+            college: "Harris-Stowe State University",
+            average: 0
+          },
+          {
+            college: "Washington University",
+            average: 0
+          },
+          {
+            college: "Webster University",
+            average: 0
+          }
+        ];
+        done();
+        break;
       default:
         done();
     }

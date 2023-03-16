@@ -12,7 +12,7 @@ export default state => html`
       <img id="entranceImg" class="cake" src=${entrance} />
     </div>
     <div class="imgContainer" id="second">
-      <h1>tell us about the environment</h1>
+      <h1>Tell us about the environment</h1>
       <p class="imgDescription"></p>
       <img id="bookImg" class="cake" src=${books} />
     </div>
